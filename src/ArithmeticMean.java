@@ -10,29 +10,31 @@ public class ArithmeticMean {
         System.out.print("Enter third short number: ");
         short value3 = Short.nextShort();
         int mean = ((value1 + value2 + value3) / 3);
-        System.out.println("The arithmetic mean of the above three numbers is equal to " + mean);
-        int absolutSum = 0;
-        if (value1 > 0) {
-            absolutSum = value1;
-        } else {
-            absolutSum = value1 * -1;
-        }
-        if (value2 > 0) {
-            absolutSum += value2;
-        } else {
-            absolutSum += value2 * -1;
-        }
-        if (value3 > 0) {
-            absolutSum += value3;
-        } else {
-            absolutSum += value3 * -1;
-        }
-        if (mean != 0) {
-            System.out.println("The result is " + (double) absolutSum / mean);
-        }else {
-            System.out.println("Division by zero is not allowed" );
+        if (mean == 0) {
+            System.out.println("Division by zero is not allowed");
             System.exit(2);
-        }
-    }
+        } else {
+            System.out.println("The arithmetic mean of the above three numbers is equal to " + mean);
+            int absolutSum;
+            if (value1 > 0) {
+                absolutSum = value1;
+            } else {
+                absolutSum = value1 * -1;
+            }
+            if (value2 > 0) {
+                absolutSum += value2;
+            } else {
+                absolutSum += value2 * -1;
+            }
+            if (value3 > 0) {
+                absolutSum += value3;
+            } else {
+                absolutSum += value3 * -1;
 
+            }
+            System.out.println("The result is " + (double) absolutSum / mean);
+
+        }
+
+    }
 }
