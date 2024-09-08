@@ -2,24 +2,24 @@ import java.util.Scanner;
 
 public class AccessAndCost {
     public static void main(String[] args) {
-        Scanner Age = new Scanner(System.in);
+        Scanner Scanner = new Scanner(System.in);
         System.out.print("Fill in your age: ");
-        int age = Age.nextInt();
+        int age = Scanner.nextInt();
         if (age < 16) {
+            System.out.println("Under 16s are not allowed");
             System.exit(2);
         }
-        Scanner VIP = new Scanner(System.in);
         System.out.print("VIP client: ");
-        boolean vip = VIP.nextBoolean();
+        boolean vip = Scanner.nextBoolean();
         Scanner Order = new Scanner(System.in);
         System.out.println("Fill in the value of your order: ");
-        int order = Order.nextInt();
+        double order = Order.nextDouble();
         if (vip) {
-            double costVip = order * 0.85;
-            System.out.println("The VIP client's charge amounts to: " + costVip);
+            double vipCost = order * 0.85;
+            System.out.println("The VIP client's order amounts is: " + vipCost);
         } else {
-            double costNonVip = order + 5000;
-            System.out.println("The non-VIP client's charge amounts to: " + costNonVip);
+            double notVipCost = order + 5000;
+            System.out.println("The non-VIP client's order amounts is: " + notVipCost);
         }
     }
 }
