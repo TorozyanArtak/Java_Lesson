@@ -14,16 +14,14 @@ public class IndexUpdater {
         if (index < 0 || (index + 3) >= size) {
             System.out.println("The operation can not be done for index " + index);
             System.exit(2);
-        } else {
-            int[] numbers = new int[size];
-            numbers[++index] = index;
-            System.out.println("Number of " + index + " index of array is: " + numbers[index]);
-            numbers[++index] = index;
-            System.out.println("Number of " + index + " index of array is: " + numbers[index]);
-            numbers[++index] = index;
-            System.out.println("Number of " + index + " index of array is: " + numbers[index]);
-
         }
+        int[] numbers = new int[size];
+        numbers[++index] = index;
+        System.out.println("Number of " + index + " index of array is: " + numbers[index]);
+        numbers[++index] = index;
+        System.out.println("Number of " + index + " index of array is: " + numbers[index]);
+        numbers[++index] = index;
+        System.out.println("Number of " + index + " index of array is: " + numbers[index]);
 
 
     }

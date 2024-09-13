@@ -12,13 +12,9 @@ public class ArraySizeByInputFirstExample {
         int[] array;
         switch (arrayLength) {
             case 3:
-                array = new int[3];
-                break;
             case 4:
-                array = new int[4];
-                break;
             case 5:
-                array = new int[5];
+                array = new int[arrayLength];
                 break;
             case 6:
             case 7:
