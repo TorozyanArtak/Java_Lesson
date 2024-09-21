@@ -1,4 +1,5 @@
 package Homework_19_09_24;
+//Զանգվածի առաջին բացասական թվից հետո պետքա insert անեք նոր թիվ՝ տվյալ բացասական էլեմենտի ինդեքսը և ստանանք նոր զանգված
 
 import java.util.Scanner;
 
@@ -30,7 +31,7 @@ public class ArrayInsertNumbers {
                 i++;
             }
         }
-        for (int i = 0; i < result.length; i++) {
+        for (int i:result) {
             System.out.print(result[i] + " ");
         }
     }
