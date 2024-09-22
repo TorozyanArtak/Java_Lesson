@@ -1,3 +1,5 @@
+package Homework_14_09_24;
+
 import java.util.Scanner;
 
 public class CheckNumberCube {

@@ -1,3 +1,5 @@
+package Homework_07_09_24;
+
 import java.util.Scanner;
 
 public class ArithmeticMean {
