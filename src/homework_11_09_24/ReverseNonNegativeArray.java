@@ -1,3 +1,5 @@
+package homework_11_09_24;
+
 public class ReverseNonNegativeArray {
     public static void main(String[] args) {
         double[] origin = {-1.2, -8.5, 4.1, -14.1, 3.5};

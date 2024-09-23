@@ -1,4 +1,4 @@
-package Homework_19_09_24;
+package homework_19_09_24;
 // Ստանում ենք զանգվածի minimum և maximum թվերը
 
 public class ArrayMaxMinNumbers {

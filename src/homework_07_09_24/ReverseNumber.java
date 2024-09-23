@@ -1,3 +1,5 @@
+package homework_07_09_24;
+
 import java.util.Scanner;
 public class ReverseNumber {
     public static void main(String[] args) {

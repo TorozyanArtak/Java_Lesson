@@ -1,4 +1,4 @@
-package Homework_19_09_24;
+package homework_19_09_24;
 //Ստուգում ենք, թե արդյոք 2-րդ զանգվածը պարունակվում է առաջինի մեջ
 
 public class ArrayInclude {

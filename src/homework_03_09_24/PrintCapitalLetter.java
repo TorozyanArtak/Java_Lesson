@@ -1,3 +1,5 @@
+package homework_03_09_24;
+
 import java.util.Scanner;
 public class PrintCapitalLetter {
     public static void main(String[] args) {

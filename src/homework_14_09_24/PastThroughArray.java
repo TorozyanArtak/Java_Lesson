@@ -1,3 +1,5 @@
+package homework_14_09_24;
+
 // double տիպի զանգվածի՝ պայմաններին բավարարող արժեքների գումարի ստացում
 public class PastThroughArray {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Homework_19_09_24;
+package homework_19_09_24;
 // Գտնում ենք զանգվածում ամենաերկար աճող հաջորդականության երկարությունը
 
 public class ArrayAscendingOrder {
