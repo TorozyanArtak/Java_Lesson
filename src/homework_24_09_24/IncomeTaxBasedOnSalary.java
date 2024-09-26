@@ -1,39 +1,33 @@
 package homework_24_09_24;
 
 public class IncomeTaxBasedOnSalary {
+    public static void main(String[] args) {
+        double mySalary = 500000.0;
+        double myCustomTaxRate = 15.0;
+        System.out.println(calculateIncomeTax(mySalary));
+        System.out.println(calculateIncomeTax(mySalary, myCustomTaxRate));
+        System.out.println(calculateIncomeTax(mySalary, true));
+        System.out.println(calculateIncomeTax(mySalary, false));
+    }
 
     public static double calculateIncomeTax(double grossSalary) {
-        validateSalary(grossSalary);
-        return grossSalary * 0.2;
+        return calculateIncomeTax(grossSalary, 20);
     }
 
     public static double calculateIncomeTax(double grossSalary, double customTaxRate) {
-        validateSalary(grossSalary);
-        return grossSalary * customTaxRate / 100;
-    }
-
-    public static double calculateIncomeTax(double grossSalary, boolean flag) {
-        validateSalary(grossSalary);
-        if (flag) {
-            return grossSalary * 0.1;
+        if (grossSalary <= 0 || customTaxRate < 0 || customTaxRate > 100) {
+            System.out.println("Custom tax rate should not be less than 0 or more than 100");
+            return 0;
         }
-        return calculateIncomeTax(grossSalary);
+        return grossSalary - grossSalary * customTaxRate / 100;
     }
 
-
-    public static void validateSalary(double salary) {
-        if (salary < 0) {
-            System.out.println("Salary should not be less than 0");
-            System.exit(2);
+    public static double calculateIncomeTax(double grossSalary, boolean isItEmployee) {
+        if (isItEmployee) {
+            return calculateIncomeTax(grossSalary, 10);
+        } else {
+            return calculateIncomeTax(grossSalary, 20);
         }
-    }
-
-    public static void main(String[] args) {
-        boolean it = true;
-        boolean noIt = false;
-        System.out.println(calculateIncomeTax(105500));
-        System.out.println(calculateIncomeTax(200000, 50000));
-        System.out.println(calculateIncomeTax(200000, it));
-        System.out.println(calculateIncomeTax(200000, noIt));
     }
 }
+
