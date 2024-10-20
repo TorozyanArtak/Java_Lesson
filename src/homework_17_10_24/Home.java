@@ -1,11 +1,11 @@
 package homework_17_10_24;
 
 public class Home {
-    public double areaBedroom;
-    public double areaLivingRoom;
-    public double areaKitchen;
-    public double areaCorridor;
-    public double areaBathroom;
+    private double areaBedroom;
+    private double areaLivingRoom;
+    private double areaKitchen;
+    private double areaCorridor;
+    private double areaBathroom;
 
     public Home(double areaBedroom, double areaLivingRoom, double areaKitchen, double areaCorridor, double areaBathroom) {
         this.areaBedroom = setArea(areaBedroom);
@@ -34,12 +34,5 @@ public class Home {
         System.out.println("Corridor size is " + areaCorridor);
         System.out.println("Bathroom size is " + areaBathroom);
 
-    }
-
-    public static void main(String[] args) {
-        Home myHome1 = new Home(5.0, 24.0, 12.0, 8.0, 6.2);
-        myHome1.printAreas();
-        Home myHome2 = new Home(0, 28.0, 14.5, 7.4);
-        myHome2.printAreas();
     }
 }
