@@ -6,11 +6,11 @@ public class Main {
         SmartLight smartLight2 = new SmartLight(true, 98, "green");
         RemoteControl remote = new RemoteControl();
         remote.changeBrightness(smartLight1, 78);
-        remote.pressBottom(smartLight1);
+        remote.pressPowerButton(smartLight1);
         remote.printStatus(smartLight1);
         System.out.println("-------------------");
         remote.changeBrightness(smartLight2, 44);
-        remote.pressBottom(smartLight2);
+        remote.pressPowerButton(smartLight2);
         remote.printStatus(smartLight2);
         System.out.println("-------------------");
         remote.resetLight(smartLight1);

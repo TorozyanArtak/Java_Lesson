@@ -14,7 +14,7 @@ public class RemoteControl {
         smartLight.setBrightness(newBrightness);
     }
 
-    public void pressBottom(SmartLight smartLight) {
+    public void pressPowerButton(SmartLight smartLight) {
         smartLight.toggle();
     }
 
