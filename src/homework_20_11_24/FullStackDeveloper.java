@@ -1,9 +1,16 @@
 package homework_20_11_24;
 
+import java.util.Random;
+
 public class FullStackDeveloper extends FEDeveloper {
 
-    public FullStackDeveloper(String name, String lastname, String[] skills, String[] ide) {
-        super(name, lastname, skills, ide);
+    public FullStackDeveloper(String name, String lastname) {
+        super(name, lastname);
+    }
+
+    @Override
+    public String[] getSkills() {
+        return new String[] {"javascript", "ReactJS", "Java"};
     }
 
     @Override
@@ -14,8 +21,12 @@ public class FullStackDeveloper extends FEDeveloper {
 
     @Override
     public boolean doHealthCheck() {
+        Random randomStatus = new Random();
         boolean feHealthCheck = super.doHealthCheck();
-        System.out.print("& Calling to API https/ararat.am/be/healthCheck ");
-        return feHealthCheck && randomStatus.nextBoolean();
+        System.out.println( feHealthCheck? "Frontend is ready":"Frontend is not ready");
+        System.out.println("Calling to API https/ararat.am/be/healthCheck ");
+        boolean beHealthCheck = randomStatus.nextBoolean();
+        System.out.println( beHealthCheck? "Backend is ready":"Backend is not ready");
+        return feHealthCheck && beHealthCheck;
     }
 }
