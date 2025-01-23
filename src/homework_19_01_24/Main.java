@@ -13,7 +13,8 @@ public class Main {
         studentGrades.add(new StudentGrades("Adam", 17, 17, 18));
         Collections.sort(studentGrades);
         System.out.println(studentGrades);
-        StudentGrades st = new StudentGrades("Ashot", 20, 19, 18);
+
+        StudentGrades st = new StudentGrades("Hayk", 20, 20, 20);
         boolean b = GenericMethod.isIN(st, studentGrades);
         System.out.println(b);
 

@@ -13,29 +13,6 @@ public class StudentGrades implements Comparable<StudentGrades> {
         this.historyKnowledge = historyKnowledge;
     }
 
-    public int getMathKnowledge() {
-        return mathKnowledge;
-    }
-
-    public void setMathKnowledge(int mathKnowledge) {
-        this.mathKnowledge = mathKnowledge;
-    }
-
-    public int getPhysicsKnowledge() {
-        return physicsKnowledge;
-    }
-
-    public void setPhysicsKnowledge(int physicsKnowledge) {
-        this.physicsKnowledge = physicsKnowledge;
-    }
-
-    public int getHistoryKnowledge() {
-        return historyKnowledge;
-    }
-
-    public void setHistoryKnowledge(int historyKnowledge) {
-        this.historyKnowledge = historyKnowledge;
-    }
 
     public String getName() {
         return name;
@@ -57,4 +34,9 @@ public class StudentGrades implements Comparable<StudentGrades> {
     public String toString() {
         return "{" + this.name + ", " + this.mathKnowledge + ", " + this.physicsKnowledge + ", " + this.historyKnowledge + "}";
     }
+    @Override
+    public boolean equals(Object o) {
+        return this.toString().equals(o.toString());
+    }
+
 }
