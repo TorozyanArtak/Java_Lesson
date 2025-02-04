@@ -13,6 +13,7 @@ public class TestPoint {
         pointsMap.put(new Points(4.0, 5.0, 6.0, "Blue", "C"), "Areg");
         pointsMap.put(new Points(7.0, 8.0, 9.0, "Green", "D"), "Davit");
         pointsMap.put(new Points(4.0, 5.0, 6.0, "Blue", "C"), "Karen");
+        pointsMap.put(new Points(9.0, 8.0, 14.0, "Yellow", "L"), "Karen");
         System.out.println(pointsMap);
 
         Map<Points, String> pointsTreeMap = new TreeMap<>(new PointComparator());
@@ -36,9 +37,6 @@ public class TestPoint {
     public static <K, V> Map<V, K> invertMap(Map<K, V> map) {
         Map<V, K> invertedMap = new HashMap<>();
         for (Map.Entry<K, V> entry : map.entrySet()) {
-            if (invertedMap.containsKey(entry.getValue())) {
-                throw new RuntimeException("Duplicate value encountered when inverting: " + entry.getValue());
-            }
             invertedMap.put(entry.getValue(), entry.getKey());
         }
         return invertedMap;
